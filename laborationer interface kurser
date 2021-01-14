@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kurser1
+{
+    class Laborationer : Kurser
+    {
+
+        private string laborationNamn;
+        private string laborationKurs;
+        public int laborationKlass;
+
+
+
+        public string LaborationNamn { get; set; }
+        public string LaborationKurs { get; set; }
+        public int LaborationKlass { get; set; }
+
+
+        public void Laborationer(string LaboorationNamn, string LaborationKurs, int LaborationKlass);
+
+    }
+}
