@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kurser1
+{
+    public class Student : Kurser
+    {
+
+        private string studentNamn;
+        private int studentID;
+        private long studentPersonnummer;
+        private string studentEmail;
+        private int studentTelNr;
+
+        public string StudentNamn { get; private set; }
+        public int StudentID { get; private set; }
+        public long StudentPersonnummer { get; private set; }
+        public string StudentEmail { get; private set; }
+        public int StudentTelNr { get; private set; }
+        
+
+
+
+        public void Student(string studentNamn, int studentID, long studentPersonnummer, int studentEmail, int studentTelNr);
+
+    }
+}
