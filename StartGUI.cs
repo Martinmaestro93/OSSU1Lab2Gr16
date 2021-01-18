@@ -30,5 +30,32 @@ namespace Hogskolan_Sarob
             objfrmHome.Show();
             objfrmHome.BringToFront();
         }
+
+        private void hanteraLärarlagToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Lararlagform objfrmHome = Lararlagform.GetChildInstance2();
+            objfrmHome.MdiParent = this;
+            objfrmHome.WindowState = FormWindowState.Maximized;
+            objfrmHome.Show();
+            objfrmHome.BringToFront();
+        }
+
+        private void hanteraKurserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kurs objfrmHome = Kurs.GetChildInstance3();
+            objfrmHome.MdiParent = this;
+            objfrmHome.WindowState = FormWindowState.Maximized;
+            objfrmHome.Show();
+            objfrmHome.BringToFront();
+        }
+
+        private void läggTillStudenterToolStripMenuItem_DoubleClick(object sender, EventArgs e)
+        {
+            Studerande objfrmHome = Studerande.GetChildInstance4();
+            objfrmHome.MdiParent = this;
+            objfrmHome.WindowState = FormWindowState.Maximized;
+            objfrmHome.Show();
+            objfrmHome.BringToFront();
+        }
     }
 }

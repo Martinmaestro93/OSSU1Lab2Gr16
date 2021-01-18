@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Hogskolan_Sarob
 {
-    public class Larare : Personal, ILarare
+    public class Larare : ILarare
     {
         #region Variabler och ctor
 
@@ -22,6 +22,32 @@ namespace Hogskolan_Sarob
         private long v2;
         private TextBox personalEmailText;
         private int v3;
+
+        public string Namn
+        {
+            get { return namn; }
+            set { namn = value; }
+        }
+        public int PersonalID
+        {
+            get { return personalID; }
+            set { personalID = value; }
+        }
+        public long PersonNummer
+        {
+            get { return personNnummer; }
+            set { personNnummer = value; }
+        }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+        public int TelNr
+        {
+            get { return telNr; }
+            set { telNr = value; }
+        }
 
         public Larare(string Namn, int PersonalID, long PersonNummer, string Email, int TelNr)
         {

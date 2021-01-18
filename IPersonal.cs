@@ -14,7 +14,7 @@ namespace Hogskolan_Sarob
         string Email { get; set; }
         int TelNr { get; set; }
 
-      
+
         string TaBort { get; set; }
 
 

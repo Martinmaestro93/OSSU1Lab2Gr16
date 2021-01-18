@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A591E18F-292D-4D05-8FEC-8D4AA62C6A04}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Hogskolan_Sarob</RootNamespace>
-    <AssemblyName>Hogskolan Sarob</AssemblyName>
+    <ProjectGuid>{D84125B7-59EC-4466-835A-C61D6119A70E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kurser1</RootNamespace>
+    <AssemblyName>Kurser1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,63 +35,55 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HogskolanGUI.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HogskolanGUI.Designer.cs">
-      <DependentUpon>HogskolanGUI.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ILaborationer.cs" />
     <Compile Include="ILarare.cs" />
-    <Compile Include="IPersonal.cs" />
-    <Compile Include="Kurs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Kurs.Designer.cs">
-      <DependentUpon>Kurs.cs</DependentUpon>
-    </Compile>
+    <Compile Include="IStudent.cs" />
     <Compile Include="Kurser.cs" />
+    <Compile Include="laborationer.cs" />
     <Compile Include="Larare.cs" />
-    <Compile Include="Lararlag2.cs" />
-    <Compile Include="Lararlagform.cs">
+    <Compile Include="Program.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lararlagform.Designer.cs">
-      <DependentUpon>Lararlagform.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Personal.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartGUI.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Student.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="StartGUI.Designer.cs">
-      <DependentUpon>StartGUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Studerande klass.cs" />
-    <Compile Include="Studerande.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Studerande.Designer.cs">
-      <DependentUpon>Studerande.cs</DependentUpon>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="StartGUI.resx">
-      <DependentUpon>StartGUI.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

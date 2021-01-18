@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hogskolan_Sarob
 {
-    interface ILarare
+    class Kurser
     {
-        void sparaLarareTillFil();
-
-        void laddaLarareFranFil();
     }
 }

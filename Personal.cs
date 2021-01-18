@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hogskolan_Sarob
 {
-    class Personal: IPersonal
+   public class Personal : IPersonal
     {
         private string namn;
         private int personalID;
@@ -15,7 +15,7 @@ namespace Hogskolan_Sarob
         private string email;
         private int telNr;
 
-      
+
         private string taBort;
 
         public string Namn
@@ -44,7 +44,7 @@ namespace Hogskolan_Sarob
             set { telNr = value; }
         }
 
-     
+
         public string TaBort
         {
             get { return taBort; }

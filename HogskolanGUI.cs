@@ -23,7 +23,7 @@ namespace Hogskolan_Sarob
         private Button button1;
         private TextBox personalLararLagsIDText;
         private Button button2;
-    
+
 
         public HogskolanGUI()
         {
@@ -99,7 +99,7 @@ namespace Hogskolan_Sarob
             listBox1.DisplayMember = "Lägg till/Ta Bort Lärare";
             lararLista.AddingNew += new AddingNewEventHandler(lararLista_AddingNew);
             lararLista.ListChanged += new ListChangedEventHandler(lararLista_ListChanged);
-          
+
         }
 
         #region childform
@@ -163,7 +163,7 @@ namespace Hogskolan_Sarob
 
             personalNamnText.Text = personalNamnText.ToString();
 
-          
+
 
             int.Parse(personalPersonalIDText.Text);
 
@@ -186,7 +186,7 @@ namespace Hogskolan_Sarob
         }
 
         /// <summary>
-        /// Raderar ett visst objekt i listan
+        /// Raderar alla objekt i listan
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -195,6 +195,15 @@ namespace Hogskolan_Sarob
             lararLista.Clear();
 
         }
-        #endregion
-    }
+
+ 
+
 }
+
+
+      
+#endregion
+    }
+
+    
+    

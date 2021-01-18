@@ -14,7 +14,7 @@ namespace Hogskolan_Sarob
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HogskolanGUI());
+            Application.Run(new StartGUI());
 
         }
     }
