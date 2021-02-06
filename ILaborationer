@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HogskolaSarob
+{
+    interface ILaboration
+    {
+
+        string laborationID { get; set; }
+        DateTime InlämningsDatum { get; set; }
+        string LaborationNamn { get; set; }
+        int KursID { get; set; }
+
+        void NyLaboration(string uppgiftsID, DateTime inlämningsDatum, string labbNamn, int kursID);
+        void TaBortLaboration();
+        void SättBetyg();
+    }
+}
