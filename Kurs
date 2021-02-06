@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HogskolaSarob
+{
+    class Kurs : IKurs
+    {
+
+        public string KursNamn { get; set; }
+        public int KursID { get; set; }
+        public static List<Kurs> kurser = new List<Kurs>();
+        public List<Student> StudenterIKurs = new List<Student>();
+        public List<Laboration> LaborationIKurs = new List<Laboration>(Laboration.uppgifter);
+
+        public void LäggaTillKurs(string astring, int aint)
+        {
+            Kurs nyKurs = new Kurs();
+            nyKurs.KursNamn = astring;
+            nyKurs.KursID = aint;
+            Kurs.kurser.Add(nyKurs);
+        }
+
+        public void TaBortKurs()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SättaBetyg()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void LäggaTillStudenterIKurs(string studentID, int kursID)
+        {
+            foreach (Student index1 in Student.studenter)
+            {
+                if(index1.StudentID == studentID)
+                {
+                    foreach (Kurs index2 in Kurs.kurser)
+                    {
+                        if (index2.KursID == kursID)
+                        {
+                            index2.StudenterIKurs.Add(index1);
+                        }
+
+
+
+
+
+                    }
+                }
+            }
+
+        }
+
+      
+        public void LäggaTillLabbTillKurs(string labbID, int kursID)
+        {
+            foreach (Laboration index1 in Laboration.uppgifter)
+            {
+                if (index1.laborationID == labbID)
+                {
+                    foreach (Kurs index2 in Kurs.kurser)
+                    {
+                        if (index2.KursID == kursID)
+                        {
+                            index2.LaborationIKurs.Add(index1);
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        internal void LäggaTillKurs(object text, int v)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
