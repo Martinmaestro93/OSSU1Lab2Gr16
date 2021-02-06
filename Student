@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HogskolaSarob
+{
+    class Student :  IStudent
+    {
+
+        public string StudentID { get; set; }
+      
+
+        public static List<Student> studenter = new List<Student>();
+        public void NyStudentIKurs(string studentID)
+        {
+            Student nyStudent = new Student();
+            nyStudent.StudentID = studentID;
+            studenter.Add(nyStudent);
+        }
+
+        public void TaBortStudent()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
