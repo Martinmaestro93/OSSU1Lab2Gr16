@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HogskolaSarob
+{
+    class Laboration : ILaboration
+    {
+        public string laborationID {get; set;}
+        public DateTime InlämningsDatum {get; set;}
+        public string LaborationNamn { get; set; }
+        public int KursID { get; set; }
+        public static List<Laboration> uppgifter = new List<Laboration>();
+
+        public void NyLaboration(string LaborationID, DateTime inlämningsDatum, string Laborationnamn, int kursID)
+        {
+            Laboration NyLaboration = new Laboration();
+            NyLaboration.laborationID = LaborationID;
+            NyLaboration.InlämningsDatum = inlämningsDatum;
+            NyLaboration.LaborationNamn = Laborationnamn;
+            NyLaboration.KursID = kursID;
+            uppgifter.Add(NyLaboration);
+        }
+
+        public void TaBortLaboration()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SättBetyg()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+     
+}
