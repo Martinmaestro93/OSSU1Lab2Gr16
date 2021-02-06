@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HogskolaSarob
+{
+    interface IKurs
+    {
+        string KursNamn { get; set; }
+        int KursID { get; set; }
+
+        void LäggaTillKurs(string astring, int aint);
+        void TaBortKurs();
+        void SättaBetyg();
+
+        void LäggaTillStudenterIKurs(string studentID, int kursID);
+        void LäggaTillLabbTillKurs(string labbID, int kursID);
+    }
+}
+
+
