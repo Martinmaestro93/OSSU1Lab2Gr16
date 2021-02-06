@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HogskolaSarob
+{
+    class StudentBetyg : IStudentBetyg
+    {
+
+        public List<Student> studentLista = new List<Student>();
+        public List<Kurs> studentKurs { get; set; }
+        public List<Laboration> studentLabb = new List<Laboration>();
+
+        public string BetygKurs { get; set; }
+        public string BetygLaboration { get; set; }
+
+        public void BetygsättLaboration()
+        {
+         
+            studentKurs.AddRange((IEnumerable<Kurs>)Student.studenter);
+           
+        }
+
+        public void BetygsättKurs()
+        {
+            throw new NotImplementedException();
+        }
+        public void StudentBetygLista(string sök)
+        {
+            Student sökStudent = new Student();
+
+            foreach (Student index in studentLista)
+            {
+                if (sök == index.StudentID)
+                {
+
+                }
+            }
+        }
+    }
+}
